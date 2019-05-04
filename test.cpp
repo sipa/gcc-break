@@ -4,7 +4,7 @@ void set_one(unsigned char* ptr);
 int check_zero(unsigned char const* in, unsigned int len);
 
 void set_one_on_stack() {
-    unsigned char buf[32];
+    unsigned char buf[1];
     set_one(buf);
 }
 
