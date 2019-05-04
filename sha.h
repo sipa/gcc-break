@@ -6,7 +6,6 @@
 
 struct CSHA256
 {
-    static const size_t OUTPUT_SIZE = 32;
     void Finalize(unsigned char* hash);
 };
 

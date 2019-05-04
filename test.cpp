@@ -4,10 +4,8 @@ class CHash256 {
 private:
     CSHA256 sha;
 public:
-    static const size_t OUTPUT_SIZE = CSHA256::OUTPUT_SIZE;
-
     void Finalize(unsigned char* hash) {
-        unsigned char buf[CSHA256::OUTPUT_SIZE];
+        unsigned char buf[32];
         sha.Finalize(buf);
     }
 };
