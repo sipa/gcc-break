@@ -11,7 +11,7 @@ int main() {
             in[j] = j+192;
         }
         for (int j = 0; j < i; ++j) {
-            CHash256()/*.Write(in + 64 * j, 64)*/.Finalize(out1 + 32 * j);
+            CHash256().Finalize(out1 + 32 * j);
         }
         for (int j = 0; j < 64 * i; ++j) {
             assert(in[j] == j+192);
