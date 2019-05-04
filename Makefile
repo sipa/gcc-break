@@ -1,2 +1,2 @@
-test: test.cpp util.cpp
-	g++ -m32 -O2 test.cpp util.cpp -o test
+test: test.c util.c
+	gcc -m32 -O2 test.c util.c -o test
