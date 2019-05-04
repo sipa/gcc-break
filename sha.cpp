@@ -1,4 +1,3 @@
-#include "sha.h"
 #include <string.h>
 #include <assert.h>
 

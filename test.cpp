@@ -1,4 +1,5 @@
-#include "sha.h"
+void Finalizer(unsigned char* hash);
+void SHA256D64(unsigned char* output, const unsigned char* input, unsigned int blocks);
 
 struct CHash256 {
     void Finalize(unsigned char* hash) {
