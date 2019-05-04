@@ -1,2 +1,8 @@
-test: test.c util.c
-	gcc -m32 -O2 test.c util.c -save-temps -o test
+.FORCE:
+test: test.c
+	gcc -m32 -O1 -finline-small-functions -save-temps $^ -o $@
+	./$@
+
+clean:
+	rm -f *.s *.i *.o test
+
