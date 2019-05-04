@@ -13,8 +13,6 @@ int main() {
         unsigned char in[4];
         for (int j = 0; j < i; ++j) {
             in[j] = 0;
-        }
-        for (int j = 0; j < i; ++j) {
             set_one_on_stack(); // Apparently modifies in[0]
         }
         assert(check_zero(in, i));
