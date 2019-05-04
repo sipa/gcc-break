@@ -16,11 +16,6 @@ public:
         sha.Write(data, len);
         return *this;
     }
-
-    CHash256& Reset() {
-        sha.Reset();
-        return *this;
-    }
 };
 
 int main() {
