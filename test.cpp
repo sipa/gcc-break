@@ -1,8 +1,6 @@
 #include "hash.h"
 #include "sha.h"
 
-#include <assert.h>
-
 int main() {
     for (int i = 0; i <= 32; ++i) {
         unsigned char in[64 * 32];
