@@ -10,11 +10,6 @@ public:
         unsigned char buf[CSHA256::OUTPUT_SIZE];
         sha.Finalize(buf);
     }
-
-    CHash256& Write(const unsigned char *data, size_t len) {
-        sha.Write(data, len);
-        return *this;
-    }
 };
 
 int main() {
@@ -25,7 +20,7 @@ int main() {
             in[j] = (unsigned char)(j+192);
         }
         for (int j = 0; j < i; ++j) {
-            CHash256().Write(in + 64 * j, 64).Finalize(out1 + 32 * j);
+            CHash256().Finalize(out1 + 32 * j);
         }
         SHA256D64(out2, in, i);
     }
