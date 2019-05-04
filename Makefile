@@ -5,6 +5,6 @@ test: test.o sha.o
 	$(LINK) test.o sha.o -o test
 test.o: test.cpp hash.h sha.h
 	$(COMP) test.cpp -o test.o
-sha.o: sha.cpp hash.h
+sha.o: sha.cpp sha.h
 	$(COMP) sha.cpp -o sha.o
 

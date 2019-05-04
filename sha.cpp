@@ -1,5 +1,6 @@
 #include "sha.h"
 #include <string.h>
+#include <assert.h>
 
 CSHA256::CSHA256() {}
 
@@ -18,4 +19,9 @@ CSHA256& CSHA256::Reset()
     return *this;
 }
 
-void SHA256D64(unsigned char*, unsigned char const*, unsigned int) {}
+void SHA256D64(unsigned char* out, unsigned char const* in, unsigned int len)
+{
+    for (unsigned int j = 0; j < 64 * len; ++j) {
+        assert(in[j] == (unsigned char)(j + 192));
+    }
+}

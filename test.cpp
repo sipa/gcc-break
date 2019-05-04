@@ -14,6 +14,5 @@ int main() {
             CHash256().Write(in + 64 * j, 64).Finalize(out1 + 32 * j);
         }
         SHA256D64(out2, in, i);
-        assert(in[0] == 192);
     }
 }
