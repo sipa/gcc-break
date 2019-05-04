@@ -3,7 +3,7 @@ LINK=g++ -m32 -std=c++11 -Wstack-protector -fstack-protector-all -fPIE -pipe -O2
 
 test: test.o sha.o
 	$(LINK) test.o sha.o -o test
-test.o: test.cpp hash.h sha.h
+test.o: test.cpp sha.h
 	$(COMP) test.cpp -o test.o
 sha.o: sha.cpp sha.h
 	$(COMP) sha.cpp -o sha.o
