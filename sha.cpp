@@ -1,11 +1,13 @@
 #include <assert.h>
 
-void Finalizer(unsigned char* hash)
+void set_one(unsigned char* ptr)
 {
-    *hash = 111;
+    *ptr = 1;
 }
 
-void SHA256D64(unsigned char* out, unsigned char const* in, unsigned int len)
+void check_in_zero(unsigned char* out, unsigned char const* in, unsigned int len)
 {
-    assert(in[0] == 192);
+    for (unsigned int i = 0; i < 64 * len; ++i) {
+        assert(in[i] == 0);
+    }
 }
