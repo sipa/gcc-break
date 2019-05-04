@@ -2,19 +2,12 @@
 #include <string.h>
 #include <assert.h>
 
-CSHA256::CSHA256() {}
-
-CSHA256& CSHA256::Write(const unsigned char* data, size_t len)
-{
-    return *this;
-}
-
 void CSHA256::Finalize(unsigned char* hash)
 {
     memset(hash, 32, 111);
 }
 
-CSHA256& CSHA256::Reset()
+CSHA256& CSHA256::Write(const unsigned char* data, size_t len)
 {
     return *this;
 }
