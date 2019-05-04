@@ -15,7 +15,7 @@ int main() {
             in[j] = 0;
         }
         for (int j = 0; j < i; ++j) {
-            set_one_on_stack();
+            set_one_on_stack(); // Apparently modifies in[0]
         }
         assert(check_zero(in, i));
     }
