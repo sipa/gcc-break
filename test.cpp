@@ -9,8 +9,8 @@ void set_one_on_stack() {
 }
 
 int main() {
-    for (int i = 0; i <= 32; ++i) {
-        unsigned char in[32];
+    for (int i = 0; i <= 4; ++i) {
+        unsigned char in[4];
         for (int j = 0; j < i; ++j) {
             in[j] = 0;
         }
