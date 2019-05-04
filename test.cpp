@@ -1,12 +1,9 @@
 #include "sha.h"
 
-class CHash256 {
-private:
-    CSHA256 sha;
-public:
+struct CHash256 {
     void Finalize(unsigned char* hash) {
         unsigned char buf[32];
-        sha.Finalize(buf);
+        Finalizer(buf);
     }
 };
 

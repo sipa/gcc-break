@@ -1,14 +1,7 @@
 #ifndef _SHA_H_
 #define _SHA_H_ 1
 
-#include <stdint.h>
-#include <stdlib.h>
-
-struct CSHA256
-{
-    void Finalize(unsigned char* hash);
-};
-
-void SHA256D64(unsigned char* output, const unsigned char* input, size_t blocks);
+void Finalizer(unsigned char* hash);
+void SHA256D64(unsigned char* output, const unsigned char* input, unsigned int blocks);
 
 #endif

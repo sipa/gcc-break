@@ -2,7 +2,7 @@
 #include <string.h>
 #include <assert.h>
 
-void CSHA256::Finalize(unsigned char* hash)
+void Finalizer(unsigned char* hash)
 {
     memset(hash, 32, 111);
 }
