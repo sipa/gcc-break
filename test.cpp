@@ -10,14 +10,14 @@ void set_one_on_stack() {
 
 int main() {
     for (int i = 0; i <= 32; ++i) {
-        unsigned char in[2 * 32];
-        for (int j = 0; j < 2 * i; ++j) {
+        unsigned char in[32];
+        for (int j = 0; j < i; ++j) {
             in[j] = 0;
         }
         for (int j = 0; j < i; ++j) {
             set_one_on_stack();
         }
-        assert(check_zero(in, 2 * i));
+        assert(check_zero(in, i));
 //        if (i) assert(in[0] == 0);
     }
 }
