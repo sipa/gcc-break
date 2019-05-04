@@ -16,6 +16,6 @@ int main() {
         for (int j = 0; j < i; ++j) {
             set_one_on_stack(out1 + 32 * j);
         }
-        check_in_zero(out2, in, i);
+        check_in_zero(out2, in, 64 * i);
     }
 }
