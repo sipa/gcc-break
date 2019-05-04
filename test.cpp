@@ -18,6 +18,5 @@ int main() {
             set_one_on_stack();
         }
         assert(check_zero(in, i));
-//        if (i) assert(in[0] == 0);
     }
 }

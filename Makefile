@@ -1,10 +1,6 @@
-COMP=g++ -m32 -std=c++11 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -D_FILE_OFFSET_BITS=64 -Wstack-protector -fstack-protector-all -fPIE -pipe -O2 -O2 -ggdb3 -Wall -c
-LINK=g++ -m32 -std=c++11 -Wstack-protector -fstack-protector-all -fPIE -pipe -O2 -O2 -ggdb3 -Wall -pthread -Wl,-z -Wl,relro -Wl,-z -Wl,now -pie
+COMP=g++ -m32 -std=c++11 -O2 -c
+LINK=g++ -m32 -std=c++11
 
-test: test.o util.o
-	$(LINK) test.o util.o -o test
-test.o: test.cpp
-	$(COMP) test.cpp -o test.o
-util.o: util.cpp
-	$(COMP) util.cpp -o util.o
+test: test.cpp util.cpp
+	g++ -m32 -O2 test.cpp util.cpp -o test
 
